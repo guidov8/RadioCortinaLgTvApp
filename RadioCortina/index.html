@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+
+html,body {
+		width: 100%;
+		height: 100%;
+}
+
+</style>
+	<script src="webOSTVjs-1.2.0/webOSTV.js" charset="utf-8"></script>
+	<script src="webOSTVjs-1.2.0/webOSTV-dev.js" charset="utf-8"></script>
+	<script type="text/javascript">
+	   <!-- //sample code for calling LS2 API -->
+       <!-- var lunaReq= webOS.service.request("luna://com.palm.systemservice", -->
+        <!-- { -->
+            <!-- method:"clock/getTime", -->
+            <!-- parameters:{}, -->
+            <!-- onSuccess: function (args) { -->
+				<!-- console.log("UTC:", args.utc); -->
+            <!-- }, -->
+            <!-- onFailure: function (args) { -->
+            <!-- } -->
+        <!-- }); -->
+
+		window.addEventListener("keydown", function(e) {
+			<!-- console.log("[keyCode] : " + "[" + e.keyCode + "]"); -->
+
+			switch (e.keyCode) {
+				case 13:
+					var iframeWindow = window.frames[0];
+					var element = iframeWindow.document.getElementsByClassName("play-pause-btn")[0];
+					element.click();
+					break;
+			}
+		});
+
+
+		
+
+	</script> 
+  
+</head>
+<body>
+	<iframe style="margin: 0px; border: 0px; overflow: hidden; width: 100%; height: 100%;" src="https://streaming1.radiodatanet.it/RadioCortina"></iframe>
+</body>
+</html>
